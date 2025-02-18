@@ -34,7 +34,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
       <head>
-        <title>Nom de la société</title>
+        <title>MEDEX INNOV</title>
       </head>
       <body className="bg-gray-100">
 
