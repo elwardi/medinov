@@ -53,7 +53,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               alt="Logo Medex Innov"
               width={100}
               height={40}
-              className="w-40 cursor-pointer hover:opacity-80 transition-opacity"
+              className="cursor-pointer hover:opacity-80 transition-opacity"
             />
           </Link>
         </div>
