@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+
 
 const images = [
   "/hero1.jpg",
@@ -12,75 +12,85 @@ const images = [
 ];
 
 export default function Home() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setCurrentImage((prev) => (prev + 1) % images.length);
     }, 4000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="relative min-h-screen flex items-center justify-center pt-20 px-6 bg-gray-100 overflow-hidden">
       {/* Section Hero */}
-      <div className="w-full h-screen relative overflow-hidden">
-        {/* Image de fond pour mobile */}
-        <div className="absolute inset-0 w-full h-full md:hidden">
+      <div className="absolute inset-0 md:hidden">
+        <AnimatePresence mode="wait">
           <Image
-            src={images[currentImageIndex]}
-            alt={`Hero Image ${currentImageIndex + 1}`}
+            key={images[currentImage]}
+            src={images[currentImage]}
+            alt="Illustration santé"
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/40"></div> {/* Overlay sombre */}
-        </div>
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-md"></div>
+      </div>
 
-        {/* Contenu de la section Hero */}
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between h-full relative z-10">
-          {/* Texte à gauche */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+      {/* Conteneur principal */}
+      <motion.div
+        className="container mx-auto flex flex-col md:flex-row items-center bg-white shadow-2xl rounded-3xl overflow-hidden relative z-10"
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        {/* Contenu textuel */}
+        <div className="w-full md:w-1/2 text-center md:text-left p-10">
+          <motion.h1
+            className="text-6xl font-extrabold text-gray-900 drop-shadow-lg"
+            initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex-1 text-center md:text-left mb-8 md:mb-0 text-white md:text-gray-900"
           >
-            <h1 className="text-5xl font-bold mb-6">
-              Bienvenue chez Nom de la Société
-            </h1>
-            <p className="text-xl mb-8">
-              Nous sommes une entreprise innovante spécialisée dans la santé numérique. Découvrez nos services et solutions pour améliorer votre bien-être.
-            </p>
-            <Link
-              href="/services"
-              className="inline-block bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition-colors duration-300"
-            >
-              Découvrir nos services
-            </Link>
-          </motion.div>
-
-          {/* Carrousel d'images à droite (visible uniquement sur desktop) */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            MEDEX INNOV
+          </motion.h1>
+          <motion.p
+            className="mt-6 text-gray-800 text-justify text-lg leading-relaxed"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex-1 relative w-full h-96 md:h-[500px] overflow-hidden rounded-lg shadow-lg hidden md:block"
           >
-            {images.map((image, index) => (
-              <Image
-                key={index}
-                src={image}
-                alt={`Hero Image ${index + 1}`}
-                fill
-                className={`absolute inset-0 object-cover transition-opacity duration-1000 ${
-                  index === currentImageIndex ? "opacity-100" : "opacity-0"
-                }`}
-              />
-            ))}
-          </motion.div>
+            Notre société est spécialisée dans le domaine de la santé &apos; faciliter l&apos;accès...
+          </motion.p>
+
+          {/* Bouton centré en dessous */}
+          <motion.a
+            href="#activities"
+            className="mt-8 inline-block px-10 py-4 bg-[#D4AF37] text-white text-lg font-semibold rounded-full shadow-md hover:bg-[#B89E2E] hover:shadow-lg transition transform hover:-translate-y-1 active:scale-95"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            Découvrir nos services
+          </motion.a>
         </div>
-      </div>
+
+        {/* Image à droite en mode desktop */}
+        <div className="w-full md:w-1/2 h-[450px] relative hidden md:block overflow-hidden">
+          <AnimatePresence mode="wait">
+            <Image
+              key={images[currentImage]}
+              src={images[currentImage]}
+              alt="Illustration santé"
+              fill
+              className="object-cover"
+            />
+          </AnimatePresence>
+        </div>
+      </motion.div>
     </div>
   );
 }
