@@ -66,6 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 href={
                   item === "Accueil" ? "/" :
                   item === "Nos Services" ? "/services" :
+                  item === "À Propos" ? "/about" :
                   item === "Contact" ? "/contact" :
                   `/${item.toLowerCase().replace(/\s/g, "")}`
                 }

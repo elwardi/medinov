@@ -76,7 +76,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Notre société est spécialisée dans le domaine de la santé &apos; faciliter l&apos;accès...
+            Notre société est spécialisée dans le domaine de la santé : Importation, exportation, distribution et vente de produits pharmaceutiques, dispositifs médicaux, plante ou tous produits à utilités sanitaires
           </motion.p>
 
           {/* Bouton centré en dessous */}
