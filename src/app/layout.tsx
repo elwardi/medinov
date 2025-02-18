@@ -109,6 +109,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     href={
                       item === "Accueil" ? "/" :
                       item === "Nos Services" ? "/services" :
+                      item === "À Propos" ? "/about" :
+                      item === "Contact" ? "/contact" :
+
                       `/${item.toLowerCase().replace(/\s/g, "")}`
                     }
                     className="text-gray-700 hover:text-blue-500 transition-colors duration-300"
