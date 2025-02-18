@@ -6,6 +6,7 @@ import "./globals.css";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { Analytics } from "@vercel/analytics/react"
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -212,7 +213,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </motion.div>
       </div>
     </footer>
+    <Analytics/>
       </body>
     </html>
+    
   );
 }
