@@ -79,7 +79,7 @@ export default function Services() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
-            <span className="text-[#D4AF37]">L&apos;MEDEX</span> Innov Services
+            <span className="text-[#D4AF37]">MEDEX</span> Innov Services
           </h1>
           <p className="text-gray-600 text-xl max-w-2xl mx-auto">
             Des solutions intégrées pour transformer l&apos;écosystème de santé
