@@ -21,8 +21,8 @@ export default function About() {
               Notre Histoire
             </h1>
             <p className="text-xl text-gray-200 max-w-2xl mx-auto">
-              Pionniers dans l'innovation santé depuis 2015
-            </p>
+  Pionniers dans l&apos;innovation santé
+</p>
           </motion.div>
           <div className="absolute inset-0 bg-black/40" />
         </div>
@@ -53,13 +53,14 @@ export default function About() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-8">
-              <span className="text-[#D4AF37]">L'ADN</span> Medex Innov
-            </h2>
-            <p className="text-gray-700 text-lg leading-relaxed mb-6">
-              Fondée par des passionnés de santé digitale, Medex Innov allie 
-              expertise médicale et excellence technologique pour révolutionner 
-              l'accès aux soins.
-            </p>
+  <span className="text-[#D4AF37]">L&apos;ADN</span> Medex Innov
+</h2>
+<p className="text-gray-700 text-lg leading-relaxed mb-6">
+  Fondée par des passionnés de santé digitale, Medex Innov allie 
+  expertise médicale et excellence technologique pour révolutionner 
+  l&apos;accès aux soins.
+</p>
+
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-[#D4AF37]/10 rounded-full flex items-center justify-center">
