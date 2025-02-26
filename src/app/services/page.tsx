@@ -84,7 +84,7 @@ export default function Services() {
           </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-[#18A5A7] to-[#BFFFC7] mx-auto mt-4 mb-6 rounded-full"></div>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Des solutions intégrées pour transformer l'écosystème de santé
+            Des solutions intégrées pour transformer l&apos;écosystème de santé
           </p>
         </motion.div>
 

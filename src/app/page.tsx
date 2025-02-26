@@ -87,7 +87,7 @@ export default function Home() {
             >
               <p className="font-normal md:font-bold text-[#18A5A7]">Votre expert en consulting pour les services et produits de santé :</p>
               <p className="mt-2">Chez MEDEX INNOV Consulting, nous mettons notre expertise au service
-               des entreprises et des professionnels du secteur de la santé. Spécialisés dans le conseil stratégique, nous vous accompagnons dans l'optimisation de vos services de santé et la sélection de produits de qualité, afin d'améliorer les performances, la sécurité et le bien-être des patients ou de vos clients.</p>
+               des entreprises et des professionnels du secteur de la santé. Spécialisés dans le conseil stratégique, nous vous accompagnons dans l&apos;optimisation de vos services de santé et la sélection de produits de qualité, afin d&apos;améliorer les performances, la sécurité et le bien-être des patients ou de vos clients.</p>
             </motion.div>
 
             {/* Bouton */}
