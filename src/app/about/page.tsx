@@ -164,8 +164,8 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-12">
             {[
               { name: "Dr. Nadia Hermani", role: "CEO & Fondateur", image: "/team1.jpg" },
-              { name: "Dr. Ahmed Benali", role: "Directeur Scientifique", image: "/team2.jpg" },
-              { name: "Dr. Sofia Kadiri", role: "Directrice Innovation", image: "/team3.jpg" }
+              { name: "Dr.  Nadia Hermani", role: "Directeur Scientifique", image: "/team2.jpg" },
+              { name: "Dr.  Nadia Hermani", role: "Directrice Innovation", image: "/team3.jpg" }
             ].map((member, index) => (
               <motion.div
                 key={index}
