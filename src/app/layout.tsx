@@ -190,7 +190,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     className="mt-6"
                   >
                     <Link
-                      href="/rendez-vous"
+                      href="/contact"
                       className="block w-full p-3 bg-gradient-to-r from-[#18A5A7] to-[#8BDDC9] text-white font-medium rounded-full transition-all duration-300 hover:shadow-md"
                       onClick={() => setIsOpen(false)}
                     >
