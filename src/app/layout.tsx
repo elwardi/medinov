@@ -105,7 +105,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               ))}
               <li>
                 <Link
-                  href="/rendez-vous"
+                  href="/contact"
                   className={`ml-6 px-4 py-2 rounded-full transition-colors duration-300 ${
                     isScrolled 
                       ? "bg-gradient-to-r from-[#18A5A7] to-[#8BDDC9] text-white hover:shadow-md" 
