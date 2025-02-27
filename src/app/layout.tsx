@@ -8,6 +8,8 @@ import Image from "next/image";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { Analytics } from "@vercel/analytics/react"
 import Loader from "./components/Loader";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -292,6 +294,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </footer>
         <Analytics/>
+        <SpeedInsights/>
       </body>
     </html>
   );
